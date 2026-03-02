@@ -1,5 +1,3 @@
-data/raw_data/
-data/raw_data/
-data/raw_data/
-data/raw_data/
-data/raw_data/
+# Ignore only large datasets
+data/df_master.csv
+data/df_2min.csv
