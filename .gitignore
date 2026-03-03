@@ -1,4 +1,4 @@
 # Ignore only large datasets
 data/df_master.csv
-data/df_2min.csv
-data/df_t1_cleaned.csv
+data/EDA/df_2T.csv
+data/EDA/df_t1_cleaned.csv
