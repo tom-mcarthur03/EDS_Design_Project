@@ -1,0 +1,29 @@
+
+Imperial blue used for general graphs:
+"#1036DD"
+
+Color mapping for numerical features: 
+color_map = {
+    
+    # Hydraulic / operational
+    "inflow": "#001489",        
+    "total_airflow": "#003E74", 
+    "t1_airflow": "#2B8CBE",    
+
+    # Nitrogen species
+    "t1_n2o": "#D50032",      
+    "t1_nh4": "#960058",        
+    "t1_no3": "#653098", 
+
+    # Process conditions
+    "t1_do": "#00AEEF",     
+     
+    # Solids
+    "t1_ss": "#6D6E71",      
+
+    # Temperature
+    "t1_temp": "#E87722",     
+
+    # Phosphorus
+    "t1_po4": "#00A651"        
+}
