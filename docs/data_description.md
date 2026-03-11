@@ -153,9 +153,7 @@ This resulted in several continuous operational segments, of which **Segments 2,
 
 Within each segment, shorter outages were removed to improve data continuity.
 
-Threshold applied:
-
-**gaps longer than 1 hour were removed**
+Threshold applied: **gaps longer than 1 hour were removed** based on the set of features used for modelling. 
 
 No interpolation was applied at this stage to ensure that modelling datasets contain **only observed measurements**. This is in alignment with our project objectives to design models that are interpretable and capture the process dynamics of real operational WWTPs. 
 
