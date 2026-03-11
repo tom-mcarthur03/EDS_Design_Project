@@ -1,29 +1,81 @@
 
-Imperial blue used for general graphs:
-"#1036DD"
+imperial_colors = {
+
+    "blue": {
+        "900": "#001489",
+        "700": "#1036DD",
+        "500": "#3A54E4",
+        "300": "#6F79D4",
+        "100": "#A7B0F2",
+    },
+
+    "red": {
+        "700": "#D50032",
+        "500": "#E63B54",
+        "300": "#F07C8F",
+        "100": "#F6B3BD",
+    },
+
+    "magenta": {
+        "700": "#C81E78",
+        "500": "#D84C97",
+        "300": "#E68ABB",
+    },
+
+    "purple": {
+        "700": "#653098",
+        "500": "#8666B8",
+        "300": "#A99BD3",
+    },
+
+    "cyan": {
+        "700": "#0088C6",
+        "500": "#00AEEF",
+        "300": "#67CFF5",
+    },
+
+    "green": {
+        "700": "#008A3D",
+        "500": "#00A651",
+        "300": "#66C18C",
+    },
+
+    "orange": {
+        "700": "#C65102",
+        "500": "#E87722",
+        "300": "#F2A26B",
+    },
+
+    "grey": {
+        "700": "#6D6E71",
+        "500": "#A7A8AA",
+        "300": "#C4C5C7",
+    }
+}
 
 Color mapping for numerical features: 
 color_map = {
-    
-    # Hydraulic / operational
-    "inflow": "#001489",        
-    "total_airflow": "#003E74", 
-    "t1_airflow": "#2B8CBE",    
 
-    # Nitrogen species
-    "t1_n2o": "#D50032",      
-    "t1_nh4": "#960058",        
-    "t1_no3": "#653098", 
+    # Hydraulic / operational (soft blues)
+    "inflow": "#3A54E4",        
+    "total_airflow": "#5C6EE8", 
+    "t1_airflow": "#7FA6F0",    
 
-    # Process conditions
-    "t1_do": "#00AEEF",     
+    # Nitrogen species (soft reds/purples)
+    "t1_n2o": "#E63B54",      
+    "t1_nh4": "#C94F9D",        
+    "t1_no3": "#8666B8", 
+
+    # Process conditions (soft cyan)
+    "t1_do": "#67CFF5",     
      
-    # Solids
-    "t1_ss": "#6D6E71",      
+    # Solids (neutral desaturated blue instead of grey)
+    "t1_ss": "#8DA0CB",      
 
-    # Temperature
-    "t1_temp": "#E87722",     
+    # Temperature (soft orange)
+    "t1_temp": "#F2A26B",     
 
-    # Phosphorus
-    "t1_po4": "#00A651"        
+    # Phosphorus (soft green)
+    "t1_po4": "#66C18C"        
 }
+
