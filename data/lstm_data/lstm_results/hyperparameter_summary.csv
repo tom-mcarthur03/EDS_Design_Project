@@ -1,0 +1,17 @@
+feature_set,lookback,hidden_size,num_layers,dropout,lr,val_loss,target
+baseline,12,32,1,0.4,5e-04,0.3073,absolute
+baseline,24,128,2,0.2,5e-04,0.3221,absolute
+baseline_no_n2o,12,32,1,0.4,5e-04,0.9481,absolute
+baseline_no_n2o,24,32,1,0.2,5e-04,1.0647,absolute
+extended,12,128,1,0.2,1e-03,0.3215,absolute
+extended,24,64,1,0.2,5e-04,0.305,absolute
+extended_no_n2o,12,32,1,0.4,5e-04,0.8956,absolute
+extended_no_n2o,24,32,1,0.4,5e-04,0.9443,absolute
+baseline,12,32,1,0.2,1e-03,1.1275,delta
+baseline,24,128,2,0.2,5e-04,1.0482,delta
+baseline_no_n2o,12,64,1,0.4,5e-04,1.293,delta
+baseline_no_n2o,24,32,1,0.2,1e-03,1.1351,delta
+extended,12,32,1,0.2,5e-04,1.1173,delta
+extended,24,128,1,0.2,1e-03,1.016,delta
+extended_no_n2o,12,32,1,0.2,1e-03,1.2333,delta
+extended_no_n2o,24,64,1,0.2,5e-04,1.0967,delta
