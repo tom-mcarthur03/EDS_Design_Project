@@ -28,7 +28,7 @@ EDS_DESIGN_PROJECT/
 │       ├── segment_3_clean.csv
 │       └── segment_4_clean.csv
 ├── docs/
-│   ├── colormap_imperial.txt
+│   └── colormap_imperial.txt
 ├── notebooks/
 │   ├── Section 2 - EDA, Preprocessing, Feature Selection/
 │   │   ├── Data Preprocessing.ipynb
