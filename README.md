@@ -35,18 +35,18 @@ EDS_DESIGN_PROJECT/
 │   │   ├── Data Quality Analysis.ipynb
 │   │   ├── Feature Selection.ipynb
 │   │   ├── Global EDA.ipynb
-│   │   └── Local EDA.ipynb
+│   │   └── Segment Based EDA.ipynb
 │   ├── Section 3 - Feature Engineering/
 │   │   ├── Seg2_10lag.ipynb
 │   │   ├── seg2_30lag.ipynb
 │   │   └── Seg4_10lag.ipynb
 │   ├── Section 4 - Predictive Modelling/
 │   │   ├── LSTM N2O Forecasting Model.ipynb
-│   │   ├── lstm_feature_engineering.ipynb
+│   │   ├── LSTM Feature Engineering.ipynb
 │   │   └── Model development.ipynb
 │   ├── Section 5 - Classification/
-│   │   ├── classification_seg4_N2O.ipynb
-│   │   └── classification_seg4_no_N2O.ipynb
+│   │   ├── Classification with N2O.ipynb
+│   │   └── Classification without N2O.ipynb
 │   └── .gitkeep
 ├── .gitignore
 ├── README.md
@@ -65,7 +65,7 @@ The cleaned segment files in `data/segment_data/` — `segment_2_clean.csv`, `se
 
 The Section 3 feature engineering work exports the derived Segment 4 files used later in classification, including `seg4_df_7_features_baseline.xls`, `seg4_df_8_features_baseline.xls`, `seg4_df_features_10lags_ready.xls`, and `seg4_df_features_10lags_readynoN20.xls`. Although these files have `.xls` extensions, they are imported in the classification workflow as CSV-compatible files.
 
-For the LSTM workflow, the cleaned segment datasets are used in `lstm_feature_engineering.ipynb`, which exports the datasets consumed by `LSTM N2O Forecasting Model.ipynb`. The `data/lstm_data/` directory contains the LSTM-ready exported datasets `seg4_baseline_clean.csv` and `seg4_extended_clean.csv`. The lstm_results subfolder then contains csv summaries and tables related to the models ran.
+For the LSTM workflow, the cleaned segment datasets are used in `LSTM Feature Engineering.ipynb`, which exports the datasets consumed by `LSTM N2O Forecasting Model.ipynb`. The `data/lstm_data/` directory contains the LSTM-ready exported datasets `seg4_baseline_clean.csv` and `seg4_extended_clean.csv`. The lstm_results subfolder then contains csv summaries and tables related to the models ran.
 
 ## Notebook execution order
 
@@ -77,7 +77,7 @@ Run the notebooks in the following order:
 
 1. `Global EDA.ipynb`
 2. `Data Preprocessing.ipynb`
-3. `Local EDA.ipynb`
+3. `Segment Based EDA.ipynb`
 4. `Data Quality Analysis.ipynb`
 5. `Feature Selection.ipynb`
 
@@ -98,17 +98,17 @@ These notebooks use the cleaned segment datasets and generate the engineered fea
 Next, run:
 
 1. `Model development.ipynb`
-2. `lstm_feature_engineering.ipynb`
+2. `LSTM Feature Engineering.ipynb`
 3. `LSTM N2O Forecasting Model.ipynb`
 
-`Model development.ipynb` uses the cleaned segment datasets directly. The LSTM workflow is sequential: `lstm_feature_engineering.ipynb` prepares the LSTM input datasets, and `LSTM N2O Forecasting Model.ipynb` uses those exported datasets for model training and evaluation.
+`Model development.ipynb` uses the cleaned segment datasets directly. The LSTM workflow is sequential: `LSTM Feature Engineering.ipynb` prepares the LSTM input datasets, and `LSTM N2O Forecasting Model.ipynb` uses those exported datasets for model training and evaluation.
 
 ### Section 5 - Classification
 
 Finally, run:
 
-1. `classification_seg4_N2O.ipynb`
-2. `classification_seg4_no_N2O.ipynb`
+1. `Classification with N2O.ipynb`
+2. `Classification without N2O.ipynb`
 
 These notebooks use the exported Segment 4 feature files from the feature engineering stage, in particular the 10-lag datasets with and without N₂O-derived inputs.
 
