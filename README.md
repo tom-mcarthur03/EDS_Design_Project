@@ -12,13 +12,32 @@ The repository is intended to function as a structured computational companion t
 EDS_DESIGN_PROJECT/
 ├── data/
 │   ├── EDA/
-│   │   ├── aved_raw.csv
 │   │   ├── desktop.ini
 │   │   └── df_10T.csv
+│
 │   ├── lstm_data/
 │   │   ├── seg4_baseline_clean.csv
-│   │   └── seg4_extended_clean.csv
-│   │   └── lstm_results/
+│   │   ├── seg4_extended_clean.csv
+│   │
+│   │   ├── absolute_n2o/
+│   │   │   ├── final_results_absolute.csv
+│   │   │   ├── r2_pivot_absolute.csv
+│   │   │   └── rmse_pivot_absolute.csv
+│   │
+│   │   ├── delta_n2o/
+│   │   │   ├── final_results_delta.csv
+│   │   │   ├── r2_pivot_delta.csv
+│   │   │   └── rmse_pivot_delta.csv
+│   │
+│   │   ├── figures/
+│   │   │   └── peak_metrics_absolute.csv
+│   │
+│   │   └── results_all/
+│   │       ├── hyperparameter_summary.csv
+│   │       ├── main_results_table.csv
+│   │       ├── r2_pivot_all.csv
+│   │       └── rmse_pivot_all.csv
+│
 │   └── segment_data/
 │       ├── seg4_df_7_features_baseline.xls
 │       ├── seg4_df_8_features_baseline.xls
@@ -27,8 +46,10 @@ EDS_DESIGN_PROJECT/
 │       ├── segment_2_clean.csv
 │       ├── segment_3_clean.csv
 │       └── segment_4_clean.csv
+│
 ├── docs/
 │   └── colormap_imperial.txt
+│
 ├── notebooks/
 │   ├── Section 2 - EDA, Preprocessing, Feature Selection/
 │   │   ├── Data Preprocessing.ipynb
@@ -36,18 +57,23 @@ EDS_DESIGN_PROJECT/
 │   │   ├── Feature Selection.ipynb
 │   │   ├── Global EDA.ipynb
 │   │   └── Segment Based EDA.ipynb
+│
 │   ├── Section 3 - Feature Engineering/
 │   │   ├── Seg2_10lag.ipynb
 │   │   ├── seg2_30lag.ipynb
 │   │   └── Seg4_10lag.ipynb
+│
 │   ├── Section 4 - Predictive Modelling/
 │   │   ├── LSTM N2O Forecasting Model.ipynb
 │   │   ├── LSTM Feature Engineering.ipynb
 │   │   └── Model development.ipynb
+│
 │   ├── Section 5 - Classification/
 │   │   ├── Classification with N2O.ipynb
 │   │   └── Classification without N2O.ipynb
+│
 │   └── .gitkeep
+│
 ├── .gitignore
 ├── README.md
 └── requirements.txt
@@ -65,7 +91,7 @@ The cleaned segment files in `data/segment_data/` — `segment_2_clean.csv`, `se
 
 The Section 3 feature engineering work exports the derived Segment 4 files used later in classification, including `seg4_df_7_features_baseline.xls`, `seg4_df_8_features_baseline.xls`, `seg4_df_features_10lags_ready.xls`, and `seg4_df_features_10lags_readynoN20.xls`. Although these files have `.xls` extensions, they are imported in the classification workflow as CSV-compatible files.
 
-For the LSTM workflow, the cleaned segment datasets are used in `LSTM Feature Engineering.ipynb`, which exports the datasets consumed by `LSTM N2O Forecasting Model.ipynb`. The `data/lstm_data/` directory contains the LSTM-ready exported datasets `seg4_baseline_clean.csv` and `seg4_extended_clean.csv`. The lstm_results subfolder then contains csv summaries and tables related to the models ran.
+For the LSTM workflow, the cleaned segment datasets are first processed in `LSTM Feature Engineering.ipynb`, which generates the model-ready inputs used in `LSTM N2O Forecasting Model.ipynb`. The `data/lstm_data/` directory contains the prepared datasets (`seg4_baseline_clean.csv` and `seg4_extended_clean.csv`) alongside structured subfolders for model outputs. These include `absolute_n2o/` and `delta_n2o/` for task-specific results, `results_all/` for aggregated performance summaries, and `figures/` for derived evaluation metrics. Together, these folders store the key outputs of the LSTM experiments, including performance tables (R², RMSE), final results, and hyperparameter summaries.
 
 ## Notebook execution order
 
